@@ -1,11 +1,10 @@
 function enviaUsuario () {
     const nuevoUsuario = {
-        // usuario:document.getElementById("usuario1").value,
-        // nombre:document.getElementById("nombre1").value,
-        // contraseña:document.getElementById("contraseña1").value,
-        // correo:document.getElementById("correo1").value,
-        // teléfono:document.getElementById("telefono1").value
-        usuario:"prueba1"
+        usuario:document.getElementById("usuario1").value,
+        nombre:document.getElementById("nombre1").value,
+        contraseña:document.getElementById("contraseña1").value,
+        correo:document.getElementById("correo1").value,
+        teléfono:document.getElementById("telefono1").value
 }
 
 const claves = Object.keys(nuevoUsuario)
@@ -21,25 +20,22 @@ if(errors.length>0){
 } 
 else {
     console.log("nuevoUsuario", nuevoUsuario)
-fetch ("http://localhost:3000/user", {
+    fetch ("http://localhost:3000/user", {
     method:"POST",
     headers:{
         "Accept": "application/json",
         "Content-Type": "application/json"
     },
     body: JSON.stringify(nuevoUsuario)
-}
-)
-.then(resp=>resp.json())
-.then(response=>{
-    if(response.error){
-        alert(response.error)
-    }
-    else{
-        window.location="/index"
-    }
-})
+    })
+    .then(resp=>resp.json())
+    .then(response=>{
+        if(response.error){
+            alert(response.error)
+        }
+        else{
+            window.location="/index"
+        }
+    })
 
-}
-
-}
+}}
