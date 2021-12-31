@@ -1,0 +1,20 @@
+{
+	"folders": [
+		{
+			"path": "..\\demo1"
+		},
+		{
+			"path": "..\\conection"
+		},
+		{
+			"path": "..\\controller"
+		},
+		{
+			"path": "..\\node_modules"
+		},
+		{
+			"path": "."
+		}
+	],
+	"settings": {}
+}
