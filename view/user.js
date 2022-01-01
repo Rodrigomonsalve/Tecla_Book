@@ -10,9 +10,8 @@ module.exports = (app) => {
     app.post("/user", async (req, res)=> {
         console.log('/user/req.body', req.body)
         let user = req.body
-        //let result = await userController.addUser(user)
-       // res.json(result)
-        //console.log(user)
+        let result = await userController.addUser(user)
+        res.json(result)
         res.send("ok")
     })
 

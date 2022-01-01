@@ -2,7 +2,8 @@ const sequelize = require ("../conection/db.js");
 
 module.exports.list = async () => {
     let result = await sequelize.query("SELECT * FROM usuarios")
-    return result;
+    let prueba = result[0];
+    return prueba;
 }
 
 module.exports.add = async(user) => {
