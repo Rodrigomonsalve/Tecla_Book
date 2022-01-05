@@ -1,0 +1,41 @@
+@import url('https://fonts.googleapis.com/css2?family=Oxygen:wght@300;400;700&display=swap');
+
+.barra1 {
+    background-color: #ff8386;
+    font-family: 'Oxygen', sans-serif;
+    position: sticky;
+    top:0;
+    height: 90px;
+
+}
+
+.boton1{
+    background-color:#672a44;
+    color: white;
+    border:#672a44;
+
+}
+
+.boton1:hover {
+    background-color: #8c3851;
+    height: 110%;
+    width: 101%;
+
+}
+
+.foto_usuario{
+    position:relative;
+    height: 250px;
+    left: 550px;
+}
+
+.foto_fondo{
+    width: 1000px;
+    margin-left:150px;
+    height:300px;
+}
+
+body {
+    background-color: #ffbea9;
+}
+
