@@ -1,4 +1,4 @@
-const userModel = require ("../model/user.js");
+const userModel = require ("../backend/model/user.js");
 
 module.exports.listUsers = async () => {
     let result = await userModel.list()

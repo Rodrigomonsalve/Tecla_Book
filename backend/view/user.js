@@ -1,4 +1,4 @@
-const userController = require("../controller/user.js");
+const userController = require("../backend/controller/user.js");
 
 module.exports = (app) => {
     app.get("/user", async (req, res) => {
