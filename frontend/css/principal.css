@@ -24,9 +24,8 @@
 }
 
 .foto_usuario{
-    position:relative;
     height: 250px;
-    left: 550px;
+    margin-left: 200px;
 }
 
 .foto_fondo{
@@ -36,6 +35,29 @@
 }
 
 body {
-    background-color: #ffbea9;
+    background-color: #ebebeb;
 }
 
+.pie1 {
+    font-family: 'Oxygen', sans-serif;
+    background-color:#672a44;
+}
+
+.pie3 {
+    font-family: 'Oxygen', sans-serif;
+    background-color:#ff8386;
+}
+
+.message1 {
+    width: 55px;
+}
+
+.message2 {
+    position: fixed;
+    bottom:15px;
+    right:15px;
+}
+
+.menu2 {
+    font-family: 'Oxygen', sans-serif;
+}
