@@ -1,4 +1,4 @@
-const sequelize = require ("../backend/conection/db.js");
+const sequelize = require ("../conection/db.js");
 
 module.exports.list = async () => {
     let result = await sequelize.query("SELECT * FROM usuarios")

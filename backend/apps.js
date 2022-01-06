@@ -16,7 +16,7 @@ app.use((req,res, next)=>{
 });
 
 const userView = require("./view/user.js");
-const sequelize = require ("./backend/conection/db.js");
+const sequelize = require ("./conection/db.js");
 
 async function serverStart () {
     try {
