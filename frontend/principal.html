@@ -9,7 +9,7 @@
     <title>Página del usuario</title>
 </head>
 <body>
-    <nav class="navbar navbar-expand-lg navbar-light container barra1">
+    <nav class="navbar navbar-expand-lg navbar-light barra1">
         <div class="container-fluid">
           <a class="navbar-brand" href="#">TeclaBook</a>
           <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
@@ -46,44 +46,69 @@
         </div>
       </nav>
 
-      <div class="container">
-        <img src="img/fondo.png" class="foto_fondo">
-    </div>
+      <div>
+        <div class="row">
+          <div class="col-12 cabecera">
+            <div class="col-12">
+            <img src="img/fondo.png" class="imagen_fondo">
+          </div>
+          <div class="row"> 
+          <div class="col-6">
+            <img src="img/usuario.jpg" class="imagen_usuario">
+          </div>
+          <div class="col-6">
+            <button type="button" class="btn btn-primary btn-sm">Agregar tecler</button>
+          </div>
+        </div> 
+            <div class="col-12">
+              <nav class="nav navegador">
+                <a class="nav-link active texto-navegador" aria-current="page" href="#">Publicaciones</a>
+                <a class="nav-link texto-navegador" href="#">Códigos</a>
+                <a class="nav-link texto-navegador" href="#">Fotos</a>
+                <a class="nav-link texto-navegador">Información</a>
+              </nav>
+            </div>
+          </div>
 
-      <div class="container">
-        <img src="img/usuario.jpg" class="foto_usuario">
-    </div>
+          
+          <div class="col-12 cuerpo">
+            <div class="row contenido">
+            <div class="col-5">
+              <div class="card informacion" style="width: 410px;">
+                <div class="card-header">
+                  Información
+                </div>
+                <ul class="list-group list-group-flush">
+                  <li class="list-group-item">Estudió en la UNAM</li>
+                  <li class="list-group-item">Ingeniero en sistemas</li>
+                  <li class="list-group-item">Vive en Coyoacán</li>
+                </ul>
+              </div>
+            </div>
+            <div class="col-7">
+              <form class="row gx-3 gy-2 align-items-center">
+                <div class="col-sm-3">
+                  <label class="visually-hidden" for="specificSizeInputGroupUsername">Username</label>
+                  <div class="input-group">
+                    <div class="input-group-text"></div>
+                    <input type="text" class="form-control" id="specificSizeInputGroupUsername" placeholder="¿Qué piensas codear el día de hoy">
+                  </div>
+                </div>
+        
+                <div class="col-auto">
+                  <button type="submit" class="btn btn-primary">Publicar</button>
+                </div>
+              </form>
+            </div>
+          </div>
+          </div>
 
-    <ul class="nav justify-content-center">
-      <li class="nav-item">
-        <a class="nav-link active" aria-current="page" href="#">Información</a>
-      </li>
-      <li class="nav-item">
-        <a class="nav-link" href="#">Códigos</a>
-      </li>
-      <li class="nav-item">
-        <a class="nav-link" href="#">Fotos</a>
-      </li>
-    </ul>
-  
-</body>
-<div class="message2">
-  <img src="img/whatsapp.png" class="message1">
-</div>
-<footer class="container pie1">
-  <div class="card text-center pie2">
-  <div class="card-header">
-    Featured
-  </div>
-  <div class="card-body pie3">
-    <h5 class="card-title">Special title treatment</h5>
-    <p class="card-text">With supporting text below as a natural lead-in to additional content.</p>
-    <a href="#" class="btn btn-primary">Go somewhere</a>
-  </div>
-  <div class="card-footer text-muted">
-    2 days ago
-  </div>
-</div>
-</footer>
+
+        </div>
+      </div>
+
+      <img src="img/whatsapp.png" class="mensaje">
+
+      
 <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-ka7Sk0Gln4gmtz2MlQnikT1wXgYsOg+OMhuP+IlRH9sENBO0LRn5q+8nbTov4+1p" crossorigin="anonymous"></script>
 </html>

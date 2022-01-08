@@ -9,55 +9,49 @@
 
 }
 
-.boton1{
-    background-color:#672a44;
-    color: white;
-    border:#672a44;
-
+.imagen_fondo {
+    height: 300px;
+    width: 1300px;
+    margin-left:110px;
 }
 
-.boton1:hover {
-    background-color: #8c3851;
-    height: 110%;
-    width: 101%;
-
+.imagen_usuario{
+    width: 200px;
+    margin-left:140px;
 }
 
-.foto_usuario{
-    height: 250px;
-    margin-left: 200px;
+.imagenes {
+    height: 20px;
 }
 
-.foto_fondo{
-    width: 1000px;
+.cabecera {
+    background-color:#8f8f8f
+}
+
+.cuerpo {
+    background-color: rgb(189, 189, 189);
+}
+
+.informacion {
     margin-left:150px;
-    height:300px;
+
+    
 }
 
-body {
-    background-color: #ebebeb;
+.navegador {
+    margin-left: 140px;
 }
 
-.pie1 {
+.texto-navegador{
+    color: rgb(255, 255, 255);
     font-family: 'Oxygen', sans-serif;
-    background-color:#672a44;
 }
 
-.pie3 {
-    font-family: 'Oxygen', sans-serif;
-    background-color:#ff8386;
-}
-
-.message1 {
+.mensaje {
     width: 55px;
-}
-
-.message2 {
     position: fixed;
-    bottom:15px;
-    right:15px;
-}
-
-.menu2 {
-    font-family: 'Oxygen', sans-serif;
+    bottom:0;
+    right: 0;
+    margin-right:30px;
+    margin-bottom: 25px;
 }
