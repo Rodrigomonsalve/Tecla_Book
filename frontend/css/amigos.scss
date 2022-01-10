@@ -1,6 +1,9 @@
 @import url('https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@500&family=Open+Sans&family=Roboto&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Bangers&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Fredoka+One&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Acme&display=swap');
+@import "global.scss";
+
 body{
     font-family: 'Fredoka One', cursive;
    background-color: #F4F5F7;
@@ -17,7 +20,7 @@ nav{
 .navbar-brand{
     font-weight: bold;
     font-size: 20px;
-    font-family: 'Fredoka One', cursive;
+    font-family: $tipo_letra;
 }
 .green{
     color: #10D875;

@@ -1,4 +1,7 @@
 @import url('https://fonts.googleapis.com/css2?family=Oxygen:wght@300;400;700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Acme&display=swap');
+@import "global.scss";
+
 body {
     display: grid;
     background-color:white;
@@ -6,9 +9,9 @@ body {
 
 header {
     padding: 50px;
-    background-color:  #672a44;
+    background-color:  $color_fuerte;
     color:blanchedalmond;
-    font-family: 'Oxygen', sans-serif;
+    font-family: $tipo_letra;
     font-size: 85px;
     margin: 5px;
     text-align: center;
@@ -27,19 +30,19 @@ form {
 }
 
 h1 {
-    font-family: 'Oxygen', sans-serif;
+    font-family: $tipo_letra;
     text-align: center;
     color:#8c3851 ;
 }
 
 label {
-    font-family: 'Oxygen', sans-serif;
+    font-family: $tipo_letra;
     font-size: 25px;
     font-weight: 300;
 }
 
 p {
-    font-family: 'Oxygen', sans-serif;
+    font-family: $tipo_letra;
     font-size: 16px;
 }
 
@@ -53,14 +56,14 @@ input {
     border-radius: 4px;
     outline: none;
     border: none;
-    font-family: 'Oxygen', sans-serif;
+    font-family: $tipo_letra;
     font-size: 18px;
 }
 
 .formulario__checkbox {
     width: 5%;
     height: 20px;
-    font-family: 'Oxygen', sans-serif;
+    font-family: $tipo_letra;
     font-size: 18px;
     font-weight: 200
 }
@@ -68,7 +71,7 @@ input {
 .btn-enviar {
     width: 45%;
     height: 70px;
-    background-color: #672a44;
+    background-color: $color_fuerte;
     border-radius: 5px;
     border: none;
     outline: none;
@@ -82,16 +85,16 @@ button:hover {
 }
 
 button {
-    color: #672a44;
-    background-color: #672a44;
-    font-family: 'Oxygen', sans-serif;
+    color: $color_fuerte;
+    background-color: $color_fuerte;
+    font-family: $tipo_letra;
 
 }
 
 footer {
-    background-color: #672a44 ;
+    background-color: $color_fuerte;
     color: white;
-    font-family: 'Oxygen', sans-serif;
+    font-family: $tipo_letra;
     font-size: 20px;
 }
 
