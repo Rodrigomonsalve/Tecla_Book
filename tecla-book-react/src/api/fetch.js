@@ -20,7 +20,7 @@ if(errors.length>0){
 } 
 else {
     console.log("nuevoUsuario", nuevoUsuario)
-    fetch ("http://localhost:3000/user", {
+    fetch ("http://localhost:3001/user", {
     method:"POST",
     headers:{
         "Accept": "application/json",

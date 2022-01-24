@@ -1,17 +1,17 @@
+import "./login.css"
 import { useState } from 'react';
 import { useNavigate } from "react-router-dom";
-import {apiLogin} from '../api/api';
-import { useLocalStorage } from "../hooks/useLocalStorage";
+import {apiLogin} from '../../api/fetch_ingreso.js';
+//import { useLocalStorage } from "../hooks/useLocalStorage";
+
 function Login() {
 
     const navigate = useNavigate()
 
-    const [loading,setLoading] = useState(false)
-
+    //const [loading,setLoading] = useState(false)
     const [error,setError] = useState({error:false,errorMessage:"Error"})
-
-    const [user, saveUser]= useLocalStorage("USER",{})  
-    const [token, saveToken]= useLocalStorage("TOKEN",{})
+    //const [user, saveUser]= useLocalStorage("USER",{})  
+    //const [token, saveToken]= useLocalStorage("TOKEN",{})
 
 
     const login = async (event) =>{
@@ -20,11 +20,11 @@ function Login() {
             email: event.target[0].value,
             pass: event.target[1].value
         }
-        setLoading(true)
+        //setLoading(true)
 
         let loginResult = await apiLogin(newLogin)
         if (loginResult) {
-            setLoading(false)
+            //setLoading(false)
 
             if(loginResult.error){
                 setError({
@@ -35,10 +35,12 @@ function Login() {
             if(loginResult.token){
                 setError({...error,
                     error:false})
-                    saveToken({token: loginResult.token})
+                    localStorage.setItem("TOKEN", loginResult.token)
+                    //saveToken({token: loginResult.token})
                     let data = loginResult.token.split(".")
                     let userData = window.atob(data[1])
-                    saveUser(userData)
+                    localStorage.setItem("USERDATA", userData)
+                    //saveUser(userData)
                     navigate("/")
 
             }
@@ -47,28 +49,27 @@ function Login() {
     }
 
     return ( 
-        <div>
-        <body>
-        <form className="formulario1" onsubmit="event.preventDefault()">
+<div>
+        
+        <form className="formulario1" onSubmit= {login}>
             <p className="invitacion">Iniciar sesión en TeclaBook</p>
             <div className="row mb-2">
-              <p><label for="inputEmail3" class="col-sm-2 col-form-label">Correo:</label></p>
+              <p><label htmlFor="inputEmail3" className="col-sm-2 col-form-label">Correo:</label></p>
               <div className="col-sm-10">
-                <input type="email" class="form-control input1" id="correo2"></input>
+                <input type="email" className="form-control input1" id="correo2" required></input>
               </div>
             </div>
             <div className="row mb-3">
-              <p><label for="inputPassword3" class="col-sm-2 col-form-label">Contraseña:</label></p>
+              <p><label htmlFor="inputPassword3" className="col-sm-2 col-form-label">Contraseña:</label></p>
               <div className="col-sm-10">
-                <input type="password" class="form-control input2" id="contraseña3"></input>
+                <input type="password" className="form-control input2" id="contraseña3" required></input>
               </div>
             </div>
-            <button type="submit" class="btn btn-primary boton1" onclick="login1()">Iniciar sesión</button>
+            <button type="submit" className="btn btn-primary boton1">Iniciar sesión</button>
           </form>
           <a href="index2.html">
             <p className="registro1">¿Es la primera vez que usas TeclaBook? Regístrate.</p>
           </a>
-          </body>
 </div>
      );
 }
