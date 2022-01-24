@@ -9,6 +9,9 @@
     <script src="https://unpkg.com/react@17/umd/react.development.js" crossorigin></script>
     <script src="https://unpkg.com/react-dom@17/umd/react-dom.development.js" crossorigin></script>
     <script src="https://unpkg.com/babel-standalone@6/babel.min.js"></script>
+    
+    
+
     <title>Página del usuario</title>
 </head>
 <body>
@@ -49,68 +52,94 @@
         </div>
       </nav>
 
-      <div>
-        <div class="row">
-          <div class="col-12 cabecera">
-            <div class="col-12">
-            <img src="img/fondo.png" class="imagen_fondo">
+      <div id="root">
+        
+      </div>
+      <script type="text/babel">
+
+      
+        function Fotos (props){
+        return (<div>
+        <div className="row">
+          <div className="col-12 cabecera">
+            <div className="col-12">
+            <img src="img/fondo.png" className="imagen_fondo"></img>
           </div>
-          <div class="row"> 
-          <div class="col-6">
-            <img src="img/usuario.jpg" class="imagen_usuario">
+          <div className="row"> 
+          <div className="col-6">
+            <img src="img/usuario.jpg" className="imagen_usuario"></img>
           </div>
-          <div class="col-6">
-            <button type="button" class="btn btn-primary btn-sm boton_amigo">Agregar tecler</button>
+          <div className="col-6">
+            <button type="button" className="btn btn-primary btn-sm boton_amigo">Agregar tecler</button>
           </div>
         </div> 
-            <div class="col-12">
-              <nav class="nav navegador">
-                <a class="nav-link active texto-navegador" aria-current="page" href="#">Publicaciones</a>
-                <a class="nav-link texto-navegador" href="#">Códigos</a>
-                <a class="nav-link texto-navegador" href="#">Fotos</a>
-                <a class="nav-link texto-navegador">Información</a>
+            <div className="col-12">
+              <nav className="nav navegador">
+                <a className="nav-link active texto-navegador" aria-current="page" href="#">Publicaciones</a>
+                <a className="nav-link texto-navegador" href="#">Códigos</a>
+                <a className="nav-link texto-navegador" href="#">Fotos</a>
+                <a className="nav-link texto-navegador">Información</a>
               </nav>
             </div>
           </div>
 
-          
-          <div class="col-12 cuerpo">
-            <div class="row contenido">
-            <div class="col-5">
-              <div class="card informacion">
-                <div class="card-header">
+
+        </div>
+      </div>)
+      }
+
+      function Publicar(props) {
+          return (<div className="col-12 cuerpo">
+            <div className="row contenido">
+            <div className="col-5">
+              <div className="card informacion">
+                <div className="card-header">
                   Información
                 </div>
-                <ul class="list-group list-group-flush">
-                  <li class="list-group-item">Estudió en la UNAM</li>
-                  <li class="list-group-item">Ingeniero en sistemas</li>
-                  <li class="list-group-item">Vive en Coyoacán</li>
+                <ul className="list-group list-group-flush">
+                  <li className="list-group-item">Estudió en la UNAM</li>
+                  <li className="list-group-item">Ingeniero en sistemas</li>
+                  <li className="list-group-item">Vive en Coyoacán</li>
                 </ul>
               </div>
             </div>
-            <div class="col-7">
-              <form class="row gx-3 gy-2 align-items-center">
-                <div class="col-sm-3 formato_publicar">
-                  <label class="visually-hidden" for="specificSizeInputGroupUsername">Username</label>
-                  <div class="input-group">
-                    <div class="input-group-text"></div>
-                    <input type="text" class="form-control espacio_publicar" id="specificSizeInputGroupUsername" placeholder="¿Qué piensas codear el día de hoy?">
+
+            <div className="col-7">
+              <form className="row gx-3 gy-2 align-items-center">
+                <div className="col-sm-3 formato_publicar">
+                  <label className="visually-hidden" for="specificSizeInputGroupUsername">Username</label>
+                  <div className="input-group">
+                    <div className="input-group-text"></div>
+                    <input type="text" className="form-control espacio_publicar" id="specificSizeInputGroupUsername" placeholder="¿Qué piensas codear el día de hoy?"></input>
                   </div>
                 </div>
         
-                <div class="col-auto">
+                <div className="col-auto">
                   <button type="submit" class="btn btn-primary boton_publicar">Publicar</button>
                 </div>
               </form>
             </div>
           </div>
-          </div>
+          </div>)
+          }
 
-
-        </div>
+      ReactDOM.render(
+      
+      <div>  
+        <Fotos/>
+        <Publicar name="Hola a todos"/>
       </div>
+        
+  
+    ,
+        document.getElementById("root")
+      );
 
+    </script>
+     
       <img src="img/whatsapp.png" class="mensaje">
+
+  
 
       
 <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-ka7Sk0Gln4gmtz2MlQnikT1wXgYsOg+OMhuP+IlRH9sENBO0LRn5q+8nbTov4+1p" crossorigin="anonymous"></script>
