@@ -49,28 +49,34 @@ function Login() {
     }
 
     return ( 
-<div>
-        
-        <form className="formulario1" onSubmit= {login}>
-            <p className="invitacion">Iniciar sesión en TeclaBook</p>
-            <div className="row mb-2">
-              <p><label htmlFor="inputEmail3" className="col-sm-2 col-form-label">Correo:</label></p>
-              <div className="col-sm-10">
-                <input type="email" className="form-control input1" id="correo2" required></input>
-              </div>
-            </div>
-            <div className="row mb-3">
-              <p><label htmlFor="inputPassword3" className="col-sm-2 col-form-label">Contraseña:</label></p>
-              <div className="col-sm-10">
-                <input type="password" className="form-control input2" id="contraseña3" required></input>
-              </div>
-            </div>
-            <button type="submit" className="btn btn-primary boton1">Iniciar sesión</button>
-          </form>
-          <a href="index2.html">
-            <p className="registro1">¿Es la primera vez que usas TeclaBook? Regístrate.</p>
-          </a>
+      
+ <div className="color">     
+
+    <form className="formulario1" onSubmit={login}>
+        <p className="invitacion">Iniciar sesión en TeclaBook</p>
+        <div className="row mb-2">
+          <p><label htmlFor="inputEmail3" className="col-sm-2 col-form-label">Correo:</label></p>
+          <div className="col-sm-10">
+            <input type="email" className="form-control input1" id="correo2"></input>
+          </div>
+        </div>
+        <div className="row mb-3">
+          <p><label htmlFor="inputPassword3" className="col-sm-2 col-form-label">Contraseña:</label></p>
+          <div className="col-sm-10">
+            <input type="password" className="form-control input2" id="contraseña3"></input>
+          </div>
+        </div>
+        <button type="submit" className="btn btn-primary boton2">Iniciar sesión</button>
+      </form>
+      <a href="index2.html">
+        <p className="registro1">¿Es la primera vez que usas TeclaBook? Regístrate.</p>
+      </a>
+    
+
+
+<footer>Tecla Academy. Todos los Derechos Reservados® 2021.</footer>
 </div>
+
      );
 }
 

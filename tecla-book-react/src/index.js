@@ -6,14 +6,17 @@ import {Login} from './components/login/login.js';
 //import {Menu} from './components/menu/menu.js';
 //import {Photographie} from './components/photographie/photographie.js';
 //import {Publicar} from './components/publicar/publicar.js';
-//import {Menu} from './components/register/register.js';
+import {Menu} from './components/menu/menu.js';
+import {Register} from './components/register/register.js';
 
 
 
 ReactDOM.render(
   <BrowserRouter>
+  <Menu/>
     <Routes>
-     <Route path="/login" element={<Login />} />    
+    <Route path="/login" element={<Login />} />
+     <Route path="/register" element={<Register />} />     
      </Routes>
   </BrowserRouter>
   

@@ -20,6 +20,7 @@ if(errors.length>0){
 } 
 else {
     console.log("nuevoUsuario", nuevoUsuario)
+    
     fetch ("http://localhost:3001/user", {
     method:"POST",
     headers:{
