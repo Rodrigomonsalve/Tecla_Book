@@ -50,7 +50,7 @@ function Login() {
 
     return ( 
       
- <div className="color">     
+ <div>     
 
     <form className="formulario1" onSubmit={login}>
         <p className="invitacion">Iniciar sesión en TeclaBook</p>
