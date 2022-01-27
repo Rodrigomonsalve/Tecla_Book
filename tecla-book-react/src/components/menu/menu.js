@@ -1,13 +1,17 @@
 import "./menu.css"
 import { useState } from 'react';
 import { useNavigate } from "react-router-dom";
+import {Amigos} from "../search/search.js"
 
 
 function Menu() {
 
 return (
 <div>
-    <nav className="navbar navbar-expand-lg navbar-light barra1">
+    <nav 
+    // className="navbar navbar-expand-lg navbar-light barra1"
+    className = "navbar navbar-expand-lg" 
+    >
         <div className="container-fluid">
           <a className="navbar-brand" href="#">TeclaBook</a>
           <button className="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
@@ -19,27 +23,17 @@ return (
                 <a className="nav-link active" aria-current="page" href="#">Inicio</a>
               </li>
               <li className="nav-item">
-                <a className="nav-link" href="#">Fotos</a>
+                <a className="nav-link" href="http://localhost:3000/search">Fotos</a>
               </li>
               <li className="nav-item dropdown">
-                <a className="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
-                  Dropdown
+                <a className="nav-link active" href="#" id="navbarDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                  Amigos
                 </a>
-                <ul className="dropdown-menu" aria-labelledby="navbarDropdown">
-                  <li><a className="dropdown-item" href="#">Action</a></li>
-                  <li><a className="dropdown-item" href="#">Another action</a></li>
-                  <li><hr className="dropdown-divider"></hr></li>
-                  <li><a className="dropdown-item" href="#">Something else here</a></li>
-                </ul>
               </li>
               <li className="nav-item">
                 <a className="nav-link">Códigos</a>
               </li>
             </ul>
-            <form className="d-flex">
-              <input className="form-control me-2" type="search" placeholder="Buscar teclers" aria-label="Search"></input>
-              <button className="btn btn-outline-success boton1" type="submit">Buscar</button>
-            </form>
           </div>
         </div>
       </nav>

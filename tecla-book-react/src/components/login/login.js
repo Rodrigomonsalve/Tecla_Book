@@ -17,8 +17,8 @@ function Login() {
     const login = async (event) =>{
         event.preventDefault()
         let newLogin = {
-            email: event.target[0].value,
-            pass: event.target[1].value
+            correo: event.target[0].value,
+            contraseña: event.target[1].value
         }
         //setLoading(true)
 
@@ -41,7 +41,7 @@ function Login() {
                     let userData = window.atob(data[1])
                     localStorage.setItem("USERDATA", userData)
                     //saveUser(userData)
-                    navigate("/")
+                    navigate("/register")
 
             }
 

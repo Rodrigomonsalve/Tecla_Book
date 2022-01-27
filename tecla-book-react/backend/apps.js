@@ -17,6 +17,9 @@ app.use((req,res, next)=>{
 
 const userView = require("./view/user.js");
 const sequelize = require ("./conection/db.js");
+const friend1 = require ("./view/friend_search.js");
+const login1 = require ("./view/user_login.js");
+
 
 async function serverStart () {
     try {
@@ -34,3 +37,5 @@ async function serverStart () {
 
 serverStart();
 userView(app);
+friend1(app);
+login1(app);

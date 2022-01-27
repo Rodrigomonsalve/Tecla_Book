@@ -8,6 +8,7 @@ import {Login} from './components/login/login.js';
 //import {Publicar} from './components/publicar/publicar.js';
 import {Menu} from './components/menu/menu.js';
 import {Register} from './components/register/register.js';
+import {Amigos} from './components/search/search.js';
 
 
 
@@ -16,7 +17,8 @@ ReactDOM.render(
   <Menu/>
     <Routes>
     <Route path="/login" element={<Login />} />
-     <Route path="/register" element={<Register />} />     
+     <Route path="/register" element={<Register />} /> 
+     <Route path="/search" element={<Amigos />} />     
      </Routes>
   </BrowserRouter>
   
