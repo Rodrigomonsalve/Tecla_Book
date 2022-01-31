@@ -1,6 +1,6 @@
 import "./menu.css"
 import { useState } from 'react';
-import { useNavigate } from "react-router-dom";
+import { NavLink, useNavigate } from "react-router-dom";
 import {Amigos} from "../search/search.js"
 
 
@@ -8,10 +8,7 @@ function Menu() {
 
 return (
 <div>
-    <nav 
-    // className="navbar navbar-expand-lg navbar-light barra1"
-    className = "navbar navbar-expand-lg" 
-    >
+    <nav className = "navbar navbar-expand-lg navbar-light barra1">
         <div className="container-fluid">
           <a className="navbar-brand" href="#">TeclaBook</a>
           <button className="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
@@ -26,8 +23,10 @@ return (
                 <a className="nav-link" href="http://localhost:3000/search">Fotos</a>
               </li>
               <li className="nav-item dropdown">
-                <a className="nav-link active" href="#" id="navbarDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                <a className="nav-link active" id="navbarDropdown"role="button" aria-expanded="false">
+                  <NavLink className="linkAmigos" to="/search"> 
                   Amigos
+                  </NavLink>
                 </a>
               </li>
               <li className="nav-item">

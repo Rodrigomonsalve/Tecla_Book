@@ -68,7 +68,7 @@ function Login() {
         </div>
         <button type="submit" className="btn btn-primary boton2">Iniciar sesión</button>
       </form>
-      <a href="index2.html">
+      <a href="http://localhost:3000/register">
         <p className="registro1">¿Es la primera vez que usas TeclaBook? Regístrate.</p>
       </a>
     
