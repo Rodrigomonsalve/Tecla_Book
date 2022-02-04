@@ -17,7 +17,11 @@ return (
           <div className="collapse navbar-collapse" id="navbarSupportedContent">
             <ul className="navbar-nav me-auto mb-2 mb-lg-0">
               <li className="nav-item">
-                <a className="nav-link active" aria-current="page" href="#">Inicio</a>
+                <a className="nav-link active" aria-current="page">
+                <NavLink className="linkAmigos" to="/"> 
+                  Inicio
+                </NavLink>
+                  </a>
               </li>
               <li className="nav-item">
                 <a className="nav-link" href="http://localhost:3000/search">Fotos</a>
@@ -25,7 +29,7 @@ return (
               <li className="nav-item dropdown">
                 <a className="nav-link active" id="navbarDropdown"role="button" aria-expanded="false">
                   <NavLink className="linkAmigos" to="/search"> 
-                  Amigos
+                  Encuentra teclers
                   </NavLink>
                 </a>
               </li>

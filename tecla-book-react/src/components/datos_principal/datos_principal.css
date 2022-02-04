@@ -1,0 +1,24 @@
+@import url("https://fonts.googleapis.com/css2?family=Oxygen:wght@300;400;700&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Kulim+Park:wght@200&display=swap");
+
+.informacion {
+    margin-left: 70px;
+    background-color: #bdbdbd;
+    box-shadow: 2px 2px 10px black;
+    padding: 10px;
+    width: 530px;
+    
+  }
+
+  .cuerpo {
+    background-color: #bdbdbd;
+    margin-right: 500px;
+  }
+
+  .contenido{
+    margin-right: 200px;
+  }
+
+  
+
+
