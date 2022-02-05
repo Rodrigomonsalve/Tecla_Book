@@ -10,15 +10,20 @@ function Publicar () {
     <div className="container general">
       <form className="row">
         <div className="col-12 formato_publicar">
-          <label className="visually-hidden" for="specificSizeInputGroupUsername">Username</label>
+          <label className="visually-hidden" htmlFor="specificSizeInputGroupUsername">Username</label>
           <div className="input-group">
             <div className="input-group-text"></div>
-            <input type="textarea" className="form-control espacio_publicar" id="specificSizeInputGroupUsername" placeholder="¿Qué piensas codear el día de hoy?"></input>
+            <textarea
+                      className="form-control"
+                      rows="4"
+                      placeholder="Cuéntanos ¿qué piensas codear el día de hoy?"
+                      required
+                    ></textarea>
           </div>
         </div>
 
         <div className="col-12">
-          <button type="submit" class="btn btn-primary boton_publicar">Publicar</button>
+          <button type="submit" className="btn btn-primary boton_publicar">Publicar</button>
         </div>
       </form>
     </div>
