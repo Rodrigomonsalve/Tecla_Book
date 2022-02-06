@@ -1,5 +1,5 @@
 const userController = require("../controller/user.js");
-const auth = require ("../midd/middleware")
+//const auth = require ("../midd/middleware")
 
 
 module.exports = (app) => {
@@ -9,7 +9,7 @@ module.exports = (app) => {
         res.json(result)
     })
 
-    app.post("/user", auth.authenticate, async (req, res)=> {
+    app.post("/user", async (req, res)=> {
         console.log('/user/req.body', req.body)
         let user = req.body
         let result = await userController.addUser(user)
