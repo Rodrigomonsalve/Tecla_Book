@@ -1,9 +1,11 @@
 const apiFriends = async (friendsData) => {
+    
     return await fetch('http://localhost:3001/search',{
         method: 'POST',
         body: JSON.stringify(friendsData),
         headers:{
-            'Content-Type': 'application/json'
+            'Content-Type': 'application/json',
+            
         }
     })
     .then(async (res)=>{

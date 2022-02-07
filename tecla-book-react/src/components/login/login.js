@@ -2,7 +2,7 @@ import "./login.css"
 import { useState } from 'react';
 import { useNavigate } from "react-router-dom";
 import {apiLogin} from '../../api/fetch_ingreso.js';
-//import { useLocalStorage } from "../hooks/useLocalStorage";
+import { useLocalStorage } from "../../hooks/localStorage.js";
 
 function Login() {
 
@@ -10,8 +10,8 @@ function Login() {
 
     //const [loading,setLoading] = useState(false)
     const [error,setError] = useState({error:false,errorMessage:"Error"})
-    //const [user, saveUser]= useLocalStorage("USER",{})  
-    //const [token, saveToken]= useLocalStorage("TOKEN",{})
+    const [user, saveUser]= useLocalStorage("USER",{})  
+    const [token, saveToken]= useLocalStorage("TOKEN",{})
 
 
     const login = async (event) =>{
@@ -35,13 +35,14 @@ function Login() {
             if(loginResult.token){
                 setError({...error,
                     error:false})
-                    localStorage.setItem("TOKEN", loginResult.token)
-                    //saveToken({token: loginResult.token})
+                    //localStorage.setItem("TOKEN", loginResult.token)
+                  
                     let data = loginResult.token.split(".")
                     let userData = window.atob(data[1])
-                    localStorage.setItem("USERDATA", userData)
-                    //saveUser(userData)
-                    navigate("/register")
+                    //localStorage.setItem("USERDATA", userData)
+                    saveToken({token: loginResult.token})
+                    saveUser(userData)
+                    navigate("/search")
 
             }
 

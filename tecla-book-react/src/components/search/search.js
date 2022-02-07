@@ -1,12 +1,14 @@
-import {React, useState} from "react";
+import {React, useEffect, useState} from "react";
 import "./search.css";
 import {apiFriends} from "../../api/fetch_amigos.js"
+import {useLocalStorage} from "../../hooks/localStorage.js"
 
 function Amigos() {
 
     //const [name, setName] = useState("");
     //const [email, setEmail] = useState("");
     const [listTeclers, setListeclers] = useState([]);
+    const [token] = useLocalStorage("TOKEN", {});
     
     const buscar = async (event) => {
         
@@ -17,7 +19,7 @@ function Amigos() {
         }
 
         console.log(nombreIngresado)
-        const result = await apiFriends(nombreIngresado)
+        const result = await apiFriends(nombreIngresado, token)
         console.log(result)
         setListeclers(result)
         

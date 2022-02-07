@@ -1,30 +1,27 @@
-import {useState} from "react";
+import { useState } from "react";
 
-function useLocalStorage (dataName, initialValue) {
-    
-    const localStorage = window.localStorage.getItem(dataName);
+function useLocalStorage(dataName, initialValue) {
+  const localStorageData = window.localStorage.getItem(dataName);
 
-    let parseData;
+  let parsedData;
 
-    if (localStorage) {
-        parseData = JSON.parse(localStorageData);
-        } else {
-            window.localStorage.setItem(dataName, JSON.stringify(initialValue));
-            parseData = initialValue;
-        }
-    const [data, setData] = useState(parseData);
+  if (localStorageData) {
+    parsedData = JSON.stringify(localStorageData);
+  } else {
+    window.localStorage.setItem(dataName, JSON.stringify(initialValue));
+    parsedData = initialValue;
+  }
 
-    const saveData = (newData) => {
-        const strigData =
-        typeof newData == "object" ? JSON.stringify(newData) : newData;
+  const [data, setData] = useState(parsedData);
 
-        window.localStorage.setItem(dataName, strigData);
-        setData (newData);
-    };
+  const saveData = (newData) => {
+    const strigData =
+      typeof newData == "object" ? JSON.stringify(newData) : newData;
+    window.localStorage.setItem(dataName, strigData);
+    setData(newData);
+  };
 
-    return [data, saveData];
-    
-    }
+  return [data, saveData];
+}
 
-    export {useLocalStorage};
-
+export { useLocalStorage };
