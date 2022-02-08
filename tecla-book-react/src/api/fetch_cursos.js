@@ -1,9 +1,11 @@
 const apiCourse = async (userCourse) =>{
-    return await fetch('http://localhost:3001/course',{
+    
+    await fetch('http://localhost:3001/course',{
          method: 'POST',
          body: JSON.stringify(userCourse),
          headers:{
-             'Content-Type': 'application/json'
+                "Accept": "application/json",
+                "Content-Type": "application/json"
          }
      })
      .then(res=>res.json())

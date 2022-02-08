@@ -1,9 +1,12 @@
 const courseModel = require ("../model/cursos.js");
 
+module.exports.listCourses = async () => {
+    let result = await courseModel.listCourse()
+    return result;
+}
 
-
-module.exports.addCourse = async (course) => {
-    await courseModel.addCourses(course)
+module.exports.addCourses = async (course) => {
+    await courseModel.addCourse(course)
     return "Curso añadido"
 
 }

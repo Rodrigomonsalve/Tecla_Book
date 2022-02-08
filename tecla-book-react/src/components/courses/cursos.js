@@ -1,23 +1,28 @@
 import "./cursos.css"
 import {useState} from "react";
 import {apiCourse} from "../../api/fetch_cursos.js"
+import { useLocalStorage } from "../../hooks/localStorage.js";
 
 
 
 function Cursos () {
 
-
-    const sendCourse = (event) => {
+    const [user] = useLocalStorage("USER", {})
+    
+    //console.log(((((user.split(":")[1]).split(",")[0]).slice(2))).replace("\"", " "))
+    const sendCourse = async (event) => {
+        
         event.preventDefault()
         
         let newCourse = {
+            key:(((((user.split(":")[1]).split(",")[0]).slice(2))).replace("\"", " ").replace("\\", "").trim()),
             name: event.target[0].value,
             place:event.target[1].value,
             date:event.target[2].value
         }
         console.log(newCourse)
 
-     let sentCourse = apiCourse (newCourse)   
+     let sentCourse = await apiCourse (newCourse)   
 
     } 
 

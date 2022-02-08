@@ -19,6 +19,9 @@ const userView = require("./view/user.js");
 const sequelize = require ("./conection/db.js");
 const friend1 = require ("./view/friend_search.js");
 const login1 = require ("./view/user_login.js");
+const courses1 = require ("./view/cursos.js");
+const mydata1 = require ("./view/mydata")
+
 
 
 async function serverStart () {
@@ -39,3 +42,5 @@ serverStart();
 userView(app);
 friend1(app);
 login1(app);
+courses1(app);
+mydata1 (app);
