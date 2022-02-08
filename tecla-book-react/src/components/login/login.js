@@ -42,6 +42,9 @@ function Login() {
                     //localStorage.setItem("USERDATA", userData)
                     saveToken({token: loginResult.token})
                     saveUser(userData)
+                    console.log(loginResult)
+                    console.log(loginResult.token)
+                    console.log(userData)
                     navigate("/search")
 
             }

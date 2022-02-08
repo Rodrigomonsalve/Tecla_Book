@@ -1,7 +1,7 @@
 @import url("https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@500&family=Open+Sans&family=Roboto&display=swap");
 @import url("https://fonts.googleapis.com/css2?family=Bangers&display=swap");
 @import url("https://fonts.googleapis.com/css2?family=Fredoka+One&display=swap");
-@import "global.scss";
+
 
 body {
   font-family: "Fredoka One", cursive;

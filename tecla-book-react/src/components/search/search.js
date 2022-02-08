@@ -2,6 +2,7 @@ import {React, useEffect, useState} from "react";
 import "./search.css";
 import {apiFriends} from "../../api/fetch_amigos.js"
 import {useLocalStorage} from "../../hooks/localStorage.js"
+import {useNavigate} from "react-router-dom"
 
 function Amigos() {
 
@@ -9,6 +10,16 @@ function Amigos() {
     //const [email, setEmail] = useState("");
     const [listTeclers, setListeclers] = useState([]);
     const [token] = useLocalStorage("TOKEN", {});
+  
+    const navigate = useNavigate();
+
+
+    useEffect(() => {
+      if(!token) {
+       navigate("/")
+     }
+   }, []);
+    
     
     const buscar = async (event) => {
         
@@ -25,6 +36,8 @@ function Amigos() {
         
         
 }
+
+
 
      return (
         <div>
@@ -50,8 +63,8 @@ function Amigos() {
         
 
      )
-}
 
+    }
 
 
 
