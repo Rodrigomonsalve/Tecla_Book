@@ -1,10 +1,11 @@
-const apiFriends = async (friendsData) => {
-    
+const apiFriends = async (friendsData, token) => {
+    console.log("token", token)
     return await fetch('http://localhost:3001/search',{
         method: 'POST',
         body: JSON.stringify(friendsData),
         headers:{
             'Content-Type': 'application/json',
+            "Authorization" : "Bearer " + token.token
             
         }
     })

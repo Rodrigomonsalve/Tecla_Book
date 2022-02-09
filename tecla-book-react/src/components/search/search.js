@@ -9,16 +9,17 @@ function Amigos() {
     //const [name, setName] = useState("");
     //const [email, setEmail] = useState("");
     const [listTeclers, setListeclers] = useState([]);
-    const [token] = useLocalStorage("TOKEN", {});
+    const [token] = useLocalStorage("TOKEN", null);
   
     const navigate = useNavigate();
 
 
-    useEffect(() => {
-      if(!token) {
-       navigate("/")
-     }
-   }, []);
+        useEffect(() => {
+          if(!token) {
+            navigate("/")
+          }
+        }, [token]);
+
     
     
     const buscar = async (event) => {
@@ -33,13 +34,9 @@ function Amigos() {
         const result = await apiFriends(nombreIngresado, token)
         console.log(result)
         setListeclers(result)
-        
-        
 }
 
-
-
-     return (
+      return (
         <div>
         <nav className="navbar navbar-light bg-light">
         <a className="navbar-brand">Encuentra más teclers</a>

@@ -1,13 +1,24 @@
 import "./cursos.css"
-import {useState} from "react";
+import {useState, useEffect} from "react";
 import {apiCourse} from "../../api/fetch_cursos.js"
 import { useLocalStorage } from "../../hooks/localStorage.js";
+import {useNavigate} from "react-router-dom"
 
 
 
 function Cursos () {
 
     const [user] = useLocalStorage("USER", {})
+    const [token] = useLocalStorage("TOKEN", null);
+  
+    const navigate = useNavigate();
+
+
+        useEffect(() => {
+          if(!token) {
+            navigate("/")
+          }
+        }, [token]);
     
     //console.log(((((user.split(":")[1]).split(",")[0]).slice(2))).replace("\"", " "))
     const sendCourse = async (event) => {

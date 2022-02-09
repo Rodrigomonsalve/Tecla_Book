@@ -1,10 +1,16 @@
 import "./menu.css"
-import { useState } from 'react';
-import { NavLink, useNavigate } from "react-router-dom";
+import { useState, useEffect } from 'react';
+import { NavLink, useNavigate} from "react-router-dom";
 import {Amigos} from "../search/search.js"
+import { useLocalStorage } from "../../hooks/localStorage";
+
 
 
 function Menu() {
+
+const [token, saveToken]=useLocalStorage("TOKEN", null)  
+//let navigate = useNavigate();
+
 
 return (
 <div>
@@ -15,7 +21,9 @@ return (
             <span className="navbar-toggler-icon"></span>
           </button>
           <div className="collapse navbar-collapse" id="navbarSupportedContent">
+            {token && (
             <ul className="navbar-nav me-auto mb-2 mb-lg-0">
+              
               <li className="nav-item">
                 <NavLink className="linkAmigos" to="courses"> 
                 Añade cursos
@@ -31,22 +39,30 @@ return (
                   Perfil
                   </NavLink>
               </li>
-              <li className="nav-item">
-                <NavLink className="linkAmigos" to="/"> 
-                Iniciar sesión
-                </NavLink>
+              
+              <li className="nav-item"><a href=""
+              onClick={()=> 
+                saveToken(null)
+                //navigate("/")
+              }>Cerrar sesión</a>              
               </li>
-              <li className="nav-item">
-                <NavLink className="linkAmigos" to="/"> 
-                Cerrar sesión
-                </NavLink>
-              </li>
-            </ul>
+              
+            </ul>)
+            }
+            {!token && (
+            <ul className="navbar-nav me-auto mb-2 mb-lg-0">
+            <li className="nav-item">
+              <NavLink className="linkAmigos" to="/"> 
+              Iniciar sesión
+              </NavLink>
+            </li>
+            </ul>)
+            }
           </div>
         </div>
       </nav>
       </div>
-      )
-      };
+)
+}
 
       export {Menu};

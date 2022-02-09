@@ -5,7 +5,7 @@ module.exports.searchUser = async (friendsData) => {
     usuarios WHERE nombre LIKE '%${friendsData.nombre}%'`);
 
     let searchResult = await response[0];
-    console.log(searchResult)
+    console.log("HOLA", searchResult)
     return searchResult
     
 };

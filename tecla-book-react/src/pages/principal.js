@@ -7,15 +7,14 @@ import {useNavigate} from "react-router-dom"
 
 
 function Home () {
-  const [token]= useLocalStorage("TOKEN",{})  
- console.log(token) 
+  const [token]= useLocalStorage("TOKEN",null)  
  const navigate = useNavigate();
 
  useEffect(() => {
    if(!token) {
     navigate("/")
   }
-}, []);
+}, [token]);
 
     return (
     <div>

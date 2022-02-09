@@ -11,7 +11,7 @@ function Login() {
     //const [loading,setLoading] = useState(false)
     const [error,setError] = useState({error:false,errorMessage:"Error"})
     const [user, saveUser]= useLocalStorage("USER",{})  
-    const [token, saveToken]= useLocalStorage("TOKEN",{})
+    const [token, saveToken]= useLocalStorage("TOKEN",null)
 
 
     const login = async (event) =>{
@@ -59,13 +59,13 @@ function Login() {
     <form className="formulario1" onSubmit={login}>
         <p className="invitacion">Iniciar sesión en TeclaBook</p>
         <div className="row mb-2">
-          <p><label htmlFor="inputEmail3" className="col-sm-2 col-form-label">Correo:</label></p>
+          <label htmlFor="inputEmail3" className="col-sm-2 col-form-label">Correo:</label>
           <div className="col-sm-10">
             <input type="email" className="form-control input1" id="correo2"></input>
           </div>
         </div>
         <div className="row mb-3">
-          <p><label htmlFor="inputPassword3" className="col-sm-2 col-form-label">Contraseña:</label></p>
+          <label htmlFor="inputPassword3" className="col-sm-2 col-form-label">Contraseña:</label>
           <div className="col-sm-10">
             <input type="password" className="form-control input2" id="contraseña3"></input>
           </div>

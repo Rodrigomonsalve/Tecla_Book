@@ -8,9 +8,11 @@ import {dataApi} from "../../api/fetch_misdatos"
 function DatosPrincipal () {
 
   const [information1, setInformation1] = useState([]);
+  const [user] = useLocalStorage("USER", {});
+  console.log(user)
 
   const data = async () => {
-    let dataCollected = await dataApi()
+    let dataCollected = await dataApi(user)
     console.log(dataCollected)
     setInformation1(dataCollected);
     }
@@ -20,7 +22,7 @@ function DatosPrincipal () {
     <div className="row contenido">
     <div className="col-5">
       {information1.map((n) => 
-      <div className="card informacion" onLoad={data}>
+      <div className="card informacion">
         <div className="card-header">
           Mi información:
         </div>
@@ -33,6 +35,8 @@ function DatosPrincipal () {
       </div>
       )
       }
+
+      <button onClick={data}>Pruebame</button>
     </div>
     </div>
     </div>

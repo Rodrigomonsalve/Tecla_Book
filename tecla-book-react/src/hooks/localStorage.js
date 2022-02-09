@@ -1,14 +1,17 @@
 import { useState } from "react";
 
 function useLocalStorage(dataName, initialValue) {
+  console.log(initialValue)
   const localStorageData = window.localStorage.getItem(dataName);
 
   let parsedData;
 
   if (localStorageData) {
-    parsedData = JSON.stringify(localStorageData);
+    parsedData = JSON.parse(localStorageData);
   } else {
+
     window.localStorage.setItem(dataName, JSON.stringify(initialValue));
+    console.log(initialValue)
     parsedData = initialValue;
   }
 

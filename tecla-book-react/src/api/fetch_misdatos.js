@@ -1,8 +1,20 @@
-const dataApi = async () => {
-    let data1 = await fetch ("http://localhost:3001/data")
-    console.log(data1)
-    //return data1;
-   
+const dataApi = async (user) => {
+   return await fetch ("http://localhost:3001/data", {
+        method: 'POST',
+        body: JSON.stringify(user),
+        headers:{
+            'Content-Type': 'application/json'
+        }
+    })
+
+    .then(async (res)=>{
+        let response = await res.json()
+        console.log(response)
+        return(response)})
+     // .then(res => console.log(res))
+     // .then(res => (res))
+     .catch(err => console.log(err))
+
     }
     
 export {dataApi};
