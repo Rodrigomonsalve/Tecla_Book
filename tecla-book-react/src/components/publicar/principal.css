@@ -65,17 +65,17 @@
   
 }
 
-.tarjeta {
-  margin-top: 100px;
-  width: 600px;
-  margin-left: -50px;
+.tarjeta-publicar {
+  margin-top: 10px;
+  width: 500px;
   height: 180px;
+  background-color: #672a44;
   
 }
 
-.tarjeta1 {
-  
-  width: 550px;
+.tarjeta-publicar2 {
+  background-color: rgb(207, 207, 207);
+  width: 470px;
   
   
 }

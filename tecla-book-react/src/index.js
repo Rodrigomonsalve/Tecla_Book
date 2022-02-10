@@ -13,8 +13,8 @@ import {Amigos} from './components/search/search.js';
 import {Publicar} from './components/publicar/publicar.js';
 import {Home} from './pages/principal';
 import { NotFound } from './pages/404.js';
-import { DatosPrincipal } from './components/datos_principal/datos_principal.js';
 import { Cursos } from './components/courses/cursos.js';
+import { YourHome } from './pages/yourdata.js';
 
 
 
@@ -24,12 +24,12 @@ ReactDOM.render(
     <Routes>
     <Route path="/" element={<Login />} />
      <Route path="/register" element={<Register />} /> 
-     <Route path="/search" element={<Amigos />} />  
+     <Route path="/search" element={<Amigos/>} />  
      <Route path="/publish" element={<Publicar/>} />
      <Route path="/principal" element={<Home/>}/>
      <Route path="/*" element={<NotFound/>}/>
      <Route path="/courses" element={<Cursos/>}/>
-     
+     <Route path="/friend:/id" element = {<YourHome/>}/>
      </Routes>
   </BrowserRouter>
   

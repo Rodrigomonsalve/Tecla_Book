@@ -6,5 +6,20 @@
   font-family: "Kulim Park", sans-serif;
   position: sticky;
   top: 0;
-  height: 90px;
+  height: 106px;
+}
+
+
+.linkAmigos{
+  padding: 15px;
+  color: #672a44;
+  font-family: "Kulim Park", sans-serif;
+}
+
+.link{
+  color: black;
+}
+
+.marca{
+  width: 90px;
 }

@@ -1,6 +1,36 @@
-.tarjeta1 {
-    width: 300px;
-    height: 300px;
-    margin-top: 15px;
+@import url("https://fonts.googleapis.com/css2?family=Oxygen:wght@300;400;700&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Kulim+Park:wght@200&display=swap");
+
+.tarjeta2 {
+    width: 400px;
+    height: 290px;
+    margin-top: 25px;
     box-shadow: 2px 2px 10px black;
+    background-color:#ff8386;
 }
+
+.boton-buscar {
+    background-color: #672a44;
+    margin-left: 40px;
+    border: black;
+}
+
+.boton-buscar:hover{
+    background-color:#ff8386;
+    color: black;
+}
+
+.texto-tecler {
+    color:black;
+    margin-left: 100px;
+}
+
+.foto-usuario{
+    height: 100px;
+    width: 100px;
+    display:flex;
+    flex-direction: column;
+    justify-content: center;
+    margin-left: 150px;
+}
+

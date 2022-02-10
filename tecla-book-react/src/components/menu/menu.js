@@ -4,8 +4,6 @@ import { NavLink, useNavigate} from "react-router-dom";
 import {Amigos} from "../search/search.js"
 import { useLocalStorage } from "../../hooks/localStorage";
 
-
-
 function Menu() {
 
 const [token, saveToken]=useLocalStorage("TOKEN", null)  
@@ -15,20 +13,18 @@ const [token, saveToken]=useLocalStorage("TOKEN", null)
 return (
 <div>
     <nav className = "navbar navbar-expand-lg navbar-light barra1">
-        <div className="container-fluid">
-          <a className="navbar-brand" href="#">TeclaBook</a>
-          <button className="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
-            <span className="navbar-toggler-icon"></span>
-          </button>
-          <div className="collapse navbar-collapse" id="navbarSupportedContent">
+        <div className="container-fluid ">
+          <a className="navbar-brand marca">TeclaBook</a>
+          <div className="navbar-collapse" id="navbarSupportedContent">
             {token && (
             <ul className="navbar-nav me-auto mb-2 mb-lg-0">
-              
+
               <li className="nav-item">
-                <NavLink className="linkAmigos" to="courses"> 
-                Añade cursos
+                <NavLink className="linkAmigos" to="/courses"> 
+                Añade cursos 
                 </NavLink>
               </li>
+            
               <li className="nav-item">
               <NavLink className="linkAmigos" to="/search"> 
                 Teclers
@@ -39,8 +35,7 @@ return (
                   Perfil
                   </NavLink>
               </li>
-              
-              <li className="nav-item"><a href=""
+              <li className="nav-item"><a className="linkAmigos" href=""
               onClick={()=> 
                 saveToken(null)
                 //navigate("/")
@@ -53,7 +48,7 @@ return (
             <ul className="navbar-nav me-auto mb-2 mb-lg-0">
             <li className="nav-item">
               <NavLink className="linkAmigos" to="/"> 
-              Iniciar sesión
+              Iniciar sesión 
               </NavLink>
             </li>
             </ul>)

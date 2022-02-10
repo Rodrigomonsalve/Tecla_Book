@@ -36,11 +36,21 @@
     margin-left: 140px;
     margin-right: 95px;
     box-shadow: 2px 2px 10px black;
+    background-color:rgb(224, 223, 223);
   }
 
   .cabecera {
-    background-color: #8f8f8f;
+    background-color: #ececec;
    
+  }
+
+  .texto-navegador {
+    color:black
+
+  }
+
+  .texto-navegador:hover{
+    color: #672a44;
   }
   
   

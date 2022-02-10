@@ -10,7 +10,7 @@ const dataApi = async (user) => {
     .then(async (res)=>{
         let response = await res.json()
         console.log(response)
-        return(response)})
+        return(response[0])})
      // .then(res => console.log(res))
      // .then(res => (res))
      .catch(err => console.log(err))

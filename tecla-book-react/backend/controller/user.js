@@ -8,7 +8,11 @@ module.exports.listUsers = async () => {
 module.exports.addUser = async (user) => {
     await userModel.add(user)
     return "Usuario registrado"
+}
 
+module.exports.foundTecler = async (id) => {
+    let result = await userModel.find(id)
+    return result;
 }
  
 

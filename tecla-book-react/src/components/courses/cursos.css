@@ -1,88 +1,10 @@
-@import url("https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@500&family=Open+Sans&family=Roboto&display=swap");
-@import url("https://fonts.googleapis.com/css2?family=Bangers&display=swap");
-@import url("https://fonts.googleapis.com/css2?family=Fredoka+One&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Oxygen:wght@300;400;700&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Kulim+Park:wght@200&display=swap");
 
 
 body {
-  font-family: "Fredoka One", cursive;
-  background-color: #F4F5F7;
-}
-
-nav {
-  background-color: #FFF;
-}
-
-.navbar-blue {
-  color: #0055FF;
-}
-
-.navbar-brand {
-  font-weight: bold;
-  font-size: 20px;
-  font-family: "Fredoka One", cursive;
-}
-
-.green {
-  color: #10D875;
-}
-
-.gray {
-  color: #878787;
-  font-weight: lighter;
-  text-decoration: none;
-}
-
-.card {
-  margin-top: 10px;
-  margin-left: 10px;
-  text-align: center;
-}
-
-.card-title {
-  font-size: 12px;
-  text-align: left;
-}
-
-.card-img-top {
-  border-radius: 50%;
-  width: 70px;
-  height: 70px;
-  margin: 0px auto;
-  margin-top: 20px;
-}
-
-.circle-icons {
-  width: 40px;
-  height: 40px;
-  border-radius: 50%;
-  color: white;
-  font-size: 16px;
-  padding: 8px;
-  margin-right: 10px;
-}
-
-.blue-back {
-  background: #0472e3;
-  background: linear-gradient(90deg, #0472e3 0%, #022080 100%);
-}
-
-.orange-back {
-  background: #e44f27;
-  background: linear-gradient(90deg, #e44f27 0%, #f06628 100%);
-}
-
-.yellow-back {
-  background: #f29b4b;
-  background: linear-gradient(90deg, #f29b4b 0%, #f4c64e 100%);
-}
-
-.white-back {
-  background: white;
-  color: #ACB5BE;
-}
-
-.list-group-item {
-  border: none;
+  font-family: "Kulim Park", sans-serif;
+  background-color: rgb(226, 226, 226)
 }
 
 .formatoCurso {
@@ -92,11 +14,12 @@ nav {
     margin-bottom: 300px;
     margin-right: 100px;
     margin-left: 100px;
+    background-color: rgba(207, 207, 207, 0.979);
     
 }
 
 .nuevoCurso {
-    background-color: blue;
+    background-color: #c35365;
     box-shadow: 2px 2px 10px black;
     color:white;
     padding:20px;
@@ -105,4 +28,15 @@ nav {
     margin-left: 100px;
    
 }
+
+.boton-curso {
+  background-color: #c35365;
+}
+
+.boton-curso:hover{
+  background-color:#ffbea9;
+  color: black;
+}
+
+
 

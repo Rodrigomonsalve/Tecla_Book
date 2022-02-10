@@ -52,8 +52,8 @@ const erase = () => {
       {publish.map(n => (        
       <form>
       <div key={n.id} className="row">
-      <div className="col-12 card tarjeta">
-        <div className="card-body tarjeta1">
+      <div className="col-12 card tarjeta-publicar">
+        <div className="card-body tarjeta-publicar2">
           <p className="card-text">{n.body}</p>
           </div>
           <button type="button" onClick={erase}>Borrar</button>

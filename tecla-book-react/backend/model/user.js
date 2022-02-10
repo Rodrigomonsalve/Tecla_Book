@@ -10,3 +10,8 @@ module.exports.add = async(user) => {
     await sequelize.query(`INSERT INTO usuarios (usuario, nombre, contraseña, correo, teléfono, disponibilidad) 
     VALUES ('${user.usuario}', '${user.nombre}', '${user.contraseña}', '${user.correo}', '${user.teléfono}', '${user.disponibilidad}')`)
 }
+
+module.exports.find = async (id) => {
+let result = await sequelize.query(`SELECT usuario, nombre, correo, teléfono, disponibilidad FROM usuarios WHERE id="${id}"`)
+return result[0];
+}

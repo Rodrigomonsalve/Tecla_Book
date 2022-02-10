@@ -4,12 +4,14 @@ import {apiFriends} from "../../api/fetch_amigos.js"
 import {useLocalStorage} from "../../hooks/localStorage.js"
 import {useNavigate} from "react-router-dom"
 
-function Amigos() {
+
+function Amigos(props) {
 
     //const [name, setName] = useState("");
     //const [email, setEmail] = useState("");
     const [listTeclers, setListeclers] = useState([]);
     const [token] = useLocalStorage("TOKEN", null);
+    const [tecler, setTecler] = useState ("");
   
     const navigate = useNavigate();
 
@@ -36,23 +38,28 @@ function Amigos() {
         setListeclers(result)
 }
 
+    const verTecler = async ()=>{
+        setTecler(listTeclers.map)
+        console.log(tecler)
+    }
+
       return (
         <div>
-        <nav className="navbar navbar-light bg-light">
+        <nav className="navbar navbar-light bg-light barrita-buscadora">
         <a className="navbar-brand">Encuentra más teclers</a>
         <form className="form-inline">
         <input className="form-control mr-sm-2" type="search" placeholder="Buscar teclers" onChange={buscar}/> 
-          <button className="btn btn-outline-success my-2 my-sm-0" type="submit">Buscar</button>
         </form>
       </nav>
         {listTeclers[0] && listTeclers.map((n)=> 
-        <div className="card gray tarjeta1">
-        <img src="https://ps.w.org/simple-user-avatar/assets/icon-128x128.png?rev=2413146" className="card-img-top"></img>
+        <div className="card gray tarjeta2">
+        <img src="https://ps.w.org/simple-user-avatar/assets/icon-128x128.png?rev=2413146" className="card-img-top foto-usuario"></img>
         <div className="card-body tarjeta">
         
-        <p className="card-text">{n.nombre}</p>
-        <p className="card-text">{n.correo}</p>
-        <a href="#" className="btn btn-success">Agregar tecler</a>
+        <p className="card-text texto-tecler">{n.nombre}</p>
+        <p className="card-text texto-tecler">{n.correo}</p>
+        <a href="#" className="btn btn-success boton-buscar">Agregar tecler</a>
+        <a href="/friend" className="btn btn-success boton-buscar" onClick={verTecler}>Ver tecler</a>
         </div>
         </div>
         )}

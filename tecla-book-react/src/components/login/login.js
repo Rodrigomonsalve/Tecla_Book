@@ -45,7 +45,7 @@ function Login() {
                     console.log(loginResult)
                     console.log(loginResult.token)
                     console.log(userData)
-                    navigate("/search")
+                    navigate("/principal")
 
             }
 

@@ -1,0 +1,45 @@
+@import url("https://fonts.googleapis.com/css2?family=Oxygen:wght@300;400;700&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Kulim+Park:wght@200&display=swap");
+
+
+.imagen_fondo {
+  height: 300px;
+  width: 1300px;
+  margin-left: 50px;
+}
+
+.imagen_usuario {
+  width: 210px;
+  margin-left: 140px;
+  position: relative;
+  bottom: 30px;
+  box-shadow: 2px 2px 10px black;
+}
+
+.boton_amigo {
+  background-color: #672a44;
+  border: #672a44;
+  position: relative;
+  top: 10px;
+  left: 480px;
+  width: 120px;
+  height: 40px;
+  box-shadow: 2px 2px 10px black;
+  font-family: "Kulim Park", sans-serif;
+}
+
+.boton_amigo:hover {
+  background-color: #c35365;
+  color: black;
+}
+
+.navegador {
+  margin-left: 140px;
+  margin-right: 95px;
+  box-shadow: 2px 2px 10px black;
+}
+
+.cabecera {
+  background-color: #8f8f8f;
+ 
+}
