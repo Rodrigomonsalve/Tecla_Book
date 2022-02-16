@@ -44,7 +44,7 @@ return (
               
             </ul>)
             }
-            {!token && (
+            {/* {!token && (
             <ul className="navbar-nav me-auto mb-2 mb-lg-0">
             <li className="nav-item">
               <NavLink className="linkAmigos" to="/"> 
@@ -52,7 +52,7 @@ return (
               </NavLink>
             </li>
             </ul>)
-            }
+            } */}
           </div>
         </div>
       </nav>

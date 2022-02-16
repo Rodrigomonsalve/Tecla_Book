@@ -39,7 +39,7 @@ const erase = () => {
                     { <textarea
                       className="form-control"
                       rows="4"
-                      placeholder="Cuéntanos ¿qué piensas codear el día de hoy?"
+                      placeholder="Cuéntanos: ¿qué piensas codear el día de hoy?"
                       required
                     ></textarea>}
           </div>

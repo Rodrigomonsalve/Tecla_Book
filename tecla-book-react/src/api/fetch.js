@@ -1,6 +1,6 @@
 const apiRegister = async (userRegister) => {
     
-       await fetch ("http://localhost:3001/user", {
+      return await fetch ("http://localhost:3001/user", {
             method:"POST",
             headers:{
                 "Accept": "application/json",
@@ -8,7 +8,7 @@ const apiRegister = async (userRegister) => {
                     },
             body: JSON.stringify(userRegister)
                 })
-                .then(res=>res.json())
+                .then(console.log(res=>res.json()))
                 .catch(err=>console.log(err))
                 
         }

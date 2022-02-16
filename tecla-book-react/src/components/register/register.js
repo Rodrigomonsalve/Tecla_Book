@@ -8,8 +8,11 @@ import { Navigate, useNavigate } from "react-router";
 function Register() {
 	const navigate = useNavigate()
 
+	
+	
 	const register = async (event) => {
 		event.preventDefault()
+		if(event.target[2].value == event.target[3].value) {
 		let newRegister = {
 			usuario:event.target[0].value,
 			nombre:event.target[1].value,
@@ -19,14 +22,21 @@ function Register() {
 			disponibilidad:event.target[7].value,
 		}
 		
+		let datosEnviados = await apiRegister (newRegister)
+		console.log(datosEnviados)
 
-		let registerResult = await apiRegister (newRegister)
-		console.log(registerResult)
-		if (registerResult) {
-			navigate("/")
+		if (datosEnviados) {
+			window.alert ("¡Felicidades! Ya formas parte de esta gran comunidad")
+			navigate("/") 
 		}
+		
 		else {
+			window.alert("Datos no válidos")
 			console.log("Datos no válidos")
+		}
+
+		} else {
+			window.alert ("Tu contraseña no coincide")
 		}
 	}
     
@@ -116,7 +126,7 @@ function Register() {
 				</label>
 			</div>
 				<button type='submit' className="btn-enviar">Registrarme</button>
-			<a href="index.html">
+			<a href="/">
 				<p>Ya tengo una cuenta</p>
 			</a>
 		</form>

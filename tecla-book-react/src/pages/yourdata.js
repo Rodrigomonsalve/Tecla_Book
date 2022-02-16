@@ -11,13 +11,14 @@ import {useParams} from "react-router"
 function YourHome () {
   const [token]= useLocalStorage("TOKEN",null)  
   const [user, setUser] = useState(undefined)
- const navigate = useNavigate();
+  const navigate = useNavigate();
 
  const {id} = useParams()
+ console.log(id)
  useEffect (() => fetch (`http://localhost:3001/user?id=${id}`)
  .then(res=>res.json())
  .then(res=>setUser(res))
- ,[id])
+ ,[])
 
  useEffect(() => {
    if(!token) {

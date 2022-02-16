@@ -42,9 +42,9 @@ function DatosPrincipal (props) {
           Mi información:
         </div>
         <ul className="list-group list-group-flush">
-          <li className="list-group-item">{profile.correo}</li>
-          <li className="list-group-item">{profile.teléfono}</li>
-          <li className="list-group-item">{profile.disponibilidad}</li>
+          <li className="list-group-item">Correo: {profile.correo}</li>
+          <li className="list-group-item">Teléfono: {profile.teléfono}</li>
+          <li className="list-group-item">Disponibilidad: {profile.disponibilidad}</li>
         </ul>
         
       </div>

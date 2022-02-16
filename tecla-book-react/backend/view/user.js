@@ -18,6 +18,7 @@ module.exports = (app) => {
         //console.log('/user/req.body', req.body)
         let user = req.body
         let result = await userController.addUser(user)
+        console.log("Prueba", result)
         res.send(result)
     })
 

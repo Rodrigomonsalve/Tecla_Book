@@ -16,8 +16,6 @@ import { NotFound } from './pages/404.js';
 import { Cursos } from './components/courses/cursos.js';
 import { YourHome } from './pages/yourdata.js';
 
-
-
 ReactDOM.render(
   <BrowserRouter>
   <Menu/>
@@ -29,7 +27,7 @@ ReactDOM.render(
      <Route path="/principal" element={<Home/>}/>
      <Route path="/*" element={<NotFound/>}/>
      <Route path="/courses" element={<Cursos/>}/>
-     <Route path="/friend:/id" element = {<YourHome/>}/>
+     <Route path="/friend/:id" element = {<YourHome/>}/>
      </Routes>
   </BrowserRouter>
   
