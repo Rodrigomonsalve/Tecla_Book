@@ -13,6 +13,8 @@ function Login() {
     const [user, saveUser]= useLocalStorage("USER",{})  
     const [token, saveToken]= useLocalStorage("TOKEN",null)
 
+    console.log(error)
+
 
     const login = async (event) =>{
         event.preventDefault()
@@ -23,6 +25,7 @@ function Login() {
         //setLoading(true)
 
         let loginResult = await apiLogin(newLogin)
+        console.log(loginResult)
         if (loginResult) {
             //setLoading(false)
 
@@ -55,7 +58,11 @@ function Login() {
     return ( 
       
  <div>     
-
+    {error.error && (
+    <div className="alert alert-danger alerta-div" role="alert">
+          <p className="alerta">¡Correo o contraseña incorrectos!</p>
+    </div>)
+    }
     <form className="formulario1" onSubmit={login}>
         <p className="invitacion">Iniciar sesión en TeclaBook</p>
         <div className="row mb-2">
@@ -70,6 +77,7 @@ function Login() {
             <input type="password" className="form-control input2" id="contraseña3"></input>
           </div>
         </div>
+        
         <button type="submit" className="btn btn-primary boton2">Iniciar sesión</button>
       </form>
       <a href="http://localhost:3000/register">

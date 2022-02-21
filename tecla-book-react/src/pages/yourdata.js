@@ -20,6 +20,8 @@ function YourHome () {
  .then(res=>setUser(res))
  ,[])
 
+ console.log(user)
+
  useEffect(() => {
    if(!token) {
     navigate("/")
@@ -29,7 +31,7 @@ function YourHome () {
     return (
     <div>
       <YourPhotographie></YourPhotographie>
-      <DatosPrincipal data={user}>
+      <DatosPrincipal da={user}>
       
       </DatosPrincipal>
 

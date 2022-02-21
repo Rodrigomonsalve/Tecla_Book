@@ -6,7 +6,7 @@ module.exports = (app) => {
     app.post("/search", auth.authenticate, async (req, res) => {
         try {
         let result = await friendController.searchFriend(req.body)
-        console.log(req.body)
+        console.log("Req.body del search:", req.body)
         res.json(result)
         }
         catch(error) {

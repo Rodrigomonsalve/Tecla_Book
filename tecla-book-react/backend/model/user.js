@@ -14,5 +14,5 @@ module.exports.add = async(user) => {
 module.exports.find = async (id) => {
 let result = await sequelize.query(`SELECT usuario, nombre, correo, teléfono, disponibilidad FROM usuarios WHERE id="${id}"`)
 console.log("PRUEBA ID", result);
-return result;
+return result[0][0];
 }

@@ -5,6 +5,8 @@ const userController = require("../controller/user.js");
 module.exports = (app) => {
     app.get("/user", async (req, res) => {
         const {id} = req.query;
+        console.log("req.query:", req.query)
+        console.log("id del req.query:", id)
         let result = undefined
         if (id){
             result = await userController.foundTecler(id)

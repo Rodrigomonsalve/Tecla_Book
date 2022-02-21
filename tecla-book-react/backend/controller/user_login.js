@@ -4,8 +4,10 @@ const jwt = require ("jsonwebtoken")
 
 module.exports.loginUser = async (userData) => {
     let responses = await userModels.login(userData)
+    console.log("Responses:", responses)
     if(responses.login){
         return {token:await jwt.sign(responses.data, "Alojamora")}
+        
     }
 
     return {error:"Usuario y contraseña incorrectos"}

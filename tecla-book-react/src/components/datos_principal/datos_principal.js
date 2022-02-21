@@ -6,17 +6,16 @@ import {dataApi} from "../../api/fetch_misdatos"
 
 
   
-function DatosPrincipal (props) {
-  const {data} = props;
-  const [profile, setProfile] = useState([]);
+function DatosPrincipal ({da}) {
+  //const {da} = props;
+  const [profile, setProfile] = useState({});
   const [user] = useLocalStorage("USER", {});
-  console.log(user)
-
-  useEffect (()=>{
-    const getData = async () => {
-    if (data) {
-      Event.preventDefault()
-      setProfile(data)
+  
+  
+  const getData = async (date) => {
+    if (date) {
+      console.log("getData", date)
+      setProfile(date)
     } else {
       setProfile(await dataApi(user))
       // const data = async () => {
@@ -27,9 +26,11 @@ function DatosPrincipal (props) {
     }
   }
 
-  getData();
+  useEffect (()=>{
+    
+  getData(da);
 
-  }, [data, user])
+  }, [da, user])
 
 
   return (

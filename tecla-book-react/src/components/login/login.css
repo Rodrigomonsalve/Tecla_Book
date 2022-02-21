@@ -67,3 +67,11 @@ footer {
   padding: 10px;
   font-size: 11px;
 }
+
+.alerta-div{
+  display:flex;
+  flex-flow: row nowrap;
+  justify-content: center;
+  width: 300px;  
+  
+}

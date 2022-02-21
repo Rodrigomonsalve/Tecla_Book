@@ -12,6 +12,9 @@ function Amigos(props) {
     const [listTeclers, setListeclers] = useState([]);
     const [token] = useLocalStorage("TOKEN", null);
     const [tecler, setTecler] = useState ("");
+    const [user]= useLocalStorage("USER",{})
+
+    console.log(user.correo)
   
     const navigate = useNavigate();
 
@@ -29,7 +32,8 @@ function Amigos(props) {
         console.log(event.target.value)
   
         let nombreIngresado = {
-            nombre:event.target.value
+            nombre:event.target.value,
+            mail: user.correo
         }
 
         console.log(nombreIngresado)
@@ -40,6 +44,8 @@ function Amigos(props) {
 
     const verTecler = async ()=>{
         setTecler(listTeclers.map)
+        console.log(listTeclers)
+        //console.log(listTeclers.map)
         console.log(tecler)
     }
 
@@ -59,7 +65,7 @@ function Amigos(props) {
         <p className="card-text texto-tecler">{n.nombre}</p>
         <p className="card-text texto-tecler">{n.correo}</p>
         <a href="#" className="btn btn-success boton-buscar">Agregar tecler</a>
-        <a href="/friend" className="btn btn-success boton-buscar" onClick={verTecler}>Ver tecler</a>
+        <a href={`/friend/${n.id}`} className="btn btn-success boton-buscar" onClick={verTecler}>Ver tecler</a>
         </div>
         </div>
         )}
