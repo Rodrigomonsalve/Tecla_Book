@@ -58,14 +58,18 @@ function Amigos(props) {
         </form>
       </nav>
         {listTeclers[0] && listTeclers.map((n)=> 
+        <div className="tarjeta_user">
         <div className="card gray tarjeta2">
+          <div className="imagen_tarjeta">
         <img src="https://ps.w.org/simple-user-avatar/assets/icon-128x128.png?rev=2413146" className="card-img-top foto-usuario"></img>
-        <div className="card-body tarjeta">
+        </div>
+        <div className="card-body tarjeta_datos">
         
         <p className="card-text texto-tecler">{n.nombre}</p>
         <p className="card-text texto-tecler">{n.correo}</p>
         <a href="#" className="btn btn-success boton-buscar">Agregar tecler</a>
         <a href={`/friend/${n.id}`} className="btn btn-success boton-buscar" onClick={verTecler}>Ver tecler</a>
+        </div>
         </div>
         </div>
         )}

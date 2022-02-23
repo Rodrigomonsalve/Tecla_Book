@@ -1,18 +1,31 @@
 @import url("https://fonts.googleapis.com/css2?family=Oxygen:wght@300;400;700&display=swap");
 @import url("https://fonts.googleapis.com/css2?family=Kulim+Park:wght@200&display=swap");
 
+.tarjeta_user {
+    display: flex;
+    flex-flow: row;
+    justify-content: center;
+    background-color: rgb(230, 230, 230);
+   
+
+}
+
 .tarjeta2 {
-    width: 400px;
+    display: flex;
+    flex-flow: row;
+    justify-content: center;
+    width: 800px;
     height: 290px;
-    margin-top: 25px;
+    /*margin-top: 25px;*/
     box-shadow: 2px 2px 10px black;
     background-color:#ff8386;
 }
 
 .boton-buscar {
     background-color: #672a44;
-    margin-left: 40px;
+    /*margin-left: 40px;*/
     border: black;
+    margin-top: 10px;
 }
 
 .boton-buscar:hover{
@@ -22,15 +35,29 @@
 
 .texto-tecler {
     color:black;
-    margin-left: 100px;
+    font-size: larger;
+    /*margin-left: 100px;*/
 }
 
 .foto-usuario{
-    height: 100px;
-    width: 100px;
-    display:flex;
+    height: 200px;
+    width: 200px;
+    /*display:flex;
     flex-direction: column;
     justify-content: center;
-    margin-left: 150px;
+    /*margin-left: 150px;*/
+}
+
+.tarjeta_datos {
+    display: flex;
+    flex-flow: column;
+    justify-content: center;
+}
+
+.imagen_tarjeta {
+    display: flex;
+    flex-flow: column;
+    justify-content: center;
+
 }
 

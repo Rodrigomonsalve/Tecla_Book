@@ -59,12 +59,17 @@ function Login() {
       
  <div>     
     {error.error && (
+      <div className="alerta_contr">
     <div className="alert alert-danger alerta-div" role="alert">
           <p className="alerta">¡Correo o contraseña incorrectos!</p>
-    </div>)
+    </div>
+    </div>
+    )
     }
+    <div className="caja_formulario">
     <form className="formulario1" onSubmit={login}>
         <p className="invitacion">Iniciar sesión en TeclaBook</p>
+        <div className="caja_inputs">
         <div className="row mb-2">
           <label htmlFor="inputEmail3" className="col-sm-2 col-form-label">Correo:</label>
           <div className="col-sm-10">
@@ -79,13 +84,15 @@ function Login() {
         </div>
         
         <button type="submit" className="btn btn-primary boton2">Iniciar sesión</button>
+        </div>
       </form>
+      
+      </div>
       <a href="http://localhost:3000/register">
         <p className="registro1">¿Es la primera vez que usas TeclaBook? Regístrate.</p>
       </a>
+      
     
-
-
 <footer>Tecla Academy. Todos los Derechos Reservados® 2021.</footer>
 </div>
 

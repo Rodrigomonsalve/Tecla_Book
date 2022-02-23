@@ -16,6 +16,7 @@ module.exports = (app) => {
         res.json(result)
     })
 
+
     app.post("/user", async (req, res)=> {
         //console.log('/user/req.body', req.body)
         let user = req.body
@@ -23,7 +24,6 @@ module.exports = (app) => {
         console.log("Prueba", result)
         res.send(result)
     })
-
     
 
 }

@@ -15,6 +15,7 @@ import {Home} from './pages/principal';
 import { NotFound } from './pages/404.js';
 import { Cursos } from './components/courses/cursos.js';
 import { YourHome } from './pages/yourdata.js';
+import { Edit } from './components/editar/edit.js';
 
 ReactDOM.render(
   <BrowserRouter>
@@ -28,6 +29,7 @@ ReactDOM.render(
      <Route path="/*" element={<NotFound/>}/>
      <Route path="/courses" element={<Cursos/>}/>
      <Route path="/friend/:id" element = {<YourHome/>}/>
+     <Route path="/edit" element = {<Edit/>}/>
      </Routes>
   </BrowserRouter>
   

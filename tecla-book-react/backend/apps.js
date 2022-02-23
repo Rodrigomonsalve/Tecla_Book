@@ -21,6 +21,9 @@ const friend1 = require ("./view/friend_search.js");
 const login1 = require ("./view/user_login.js");
 const courses1 = require ("./view/cursos.js");
 const mydata1 = require ("./view/mydata")
+const myPhotos = require ("./view/fotos.js")
+
+app.use("/", express.static("public"));
 
 
 
@@ -44,3 +47,4 @@ friend1(app);
 login1(app);
 courses1(app);
 mydata1 (app);
+myPhotos(app);
