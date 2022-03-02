@@ -1,15 +1,15 @@
 const apiPhoto = async (userPhotos) => {
     //console.log(userPhotos)
-    return await fetch ("http://localhost:3001/photos", {
+    return await fetch ("http://localhost:3001/getPhotos", {
           method:"POST",
           headers:{
-              "Accept": "application/json",
+              //"Accept": "application/json",
               "Content-Type": "application/json"
                   },
           body: JSON.stringify(userPhotos)
               })
               .then(res=>res.json())
-              .catch(err=>(err))
+              .catch(err=>console.log("error de fotos", err))
               
       }
   

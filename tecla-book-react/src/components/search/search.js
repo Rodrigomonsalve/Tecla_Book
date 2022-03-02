@@ -61,7 +61,7 @@ function Amigos(props) {
         <div className="tarjeta_user">
         <div className="card gray tarjeta2">
           <div className="imagen_tarjeta">
-        <img src="https://ps.w.org/simple-user-avatar/assets/icon-128x128.png?rev=2413146" className="card-img-top foto-usuario"></img>
+        <img src="http://localhost:3001/photos/_103100084_1.jpg" className="card-img-top foto-usuario"></img>
         </div>
         <div className="card-body tarjeta_datos">
         

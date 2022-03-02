@@ -8,17 +8,25 @@ import {apiPhoto} from "../../api/fetch_fotos.js"
 function Photographie(){
 
 const [user] = useLocalStorage("USER", {});
-const [foto, setFoto]=useState({});
+const [foto1, setFoto1]=useState({});
+const [foto2, setFoto2] = useState ({});
 
 const getPhoto = async () => {
     let userPhoto = user.correo
-    //console.log(userPhoto)
-    let bringPhoto = await apiPhoto(userPhoto)
-    //console.log(bringPhoto)
-    setFoto(bringPhoto)
-    console.log(foto)
+    let objetctPhoto = {
+      correo: userPhoto
+    }
+    console.log(objetctPhoto)
+    let bringPhoto = await apiPhoto(objetctPhoto)
+    console.log(bringPhoto)
+    setFoto1(bringPhoto.fotografia)
+    setFoto2(bringPhoto.fondo)
+   
 
 }
+
+console.log(foto1)
+console.log(foto2)
 
 useEffect (() => {
   getPhoto ();
@@ -28,11 +36,11 @@ useEffect (() => {
         <div>
         <div className="row">
           <div className="col-12 cabecera">
-            <div className="col-12">
+            <div className="col-12 contenedor_imagen_fondo">
             <img src="http://localhost:3001/photos/javascript.png" className="imagen_fondo"></img>
           </div>
           <div className="row"> 
-          <div className="col-6">
+          <div className="col-6 contenedor_imagen_perfil">
             <img src="http://localhost:3001/photos/rodrigo.jpg" className="imagen_usuario"></img>
           </div>
           <div className="col-6">

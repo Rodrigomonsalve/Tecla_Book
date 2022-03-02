@@ -12,6 +12,7 @@ function Register() {
 	
 	const register = async (event) => {
 		event.preventDefault()
+		console.log(event.target[7].value)
 		if(event.target[2].value == event.target[3].value) {
 		let newRegister = {
 			usuario:event.target[0].value,
@@ -130,7 +131,7 @@ function Register() {
 			<div className="formulario_grupo" id="grupo__foto_perfil">
 				<label htmlFor="foto_perfil" className="formulario__label">Foto de perfil:</label>
 				<div className="formulario__grupo-input">
-					<input type="file" className="formulario__input" name="telefono" id="foto_perfil" placeholder="Lo puedes hacer posteriormente"></input>
+					<input type="file" className="formulario__input" name="perfil" id="foto_perfil" placeholder="Lo puedes hacer posteriormente"></input>
 					<i className="formulario__validacion-estado fas fa-times-circle"></i>
 				</div>
 				<p className="formulario__input-error">Lo puedes hacer posteriormente.</p>
@@ -139,7 +140,7 @@ function Register() {
 			<div className="formulario_grupo" id="grupo__foto_fondo">
 				<label htmlFor="foto_fondo" className="formulario__label">Imagen de fondo:</label>
 				<div className="formulario__grupo-input">
-					<input type="file" className="formulario__input" name="telefono" id="foto_fondo" placeholder="Lo puedes hacer posteriormente"></input>
+					<input type="file" className="formulario__input" name="fondo" id="foto_fondo" placeholder="Lo puedes hacer posteriormente"></input>
 					<i className="formulario__validacion-estado fas fa-times-circle"></i>
 				</div>
 				<p className="formulario__input-error">Lo puedes hacer posteriormente.</p>

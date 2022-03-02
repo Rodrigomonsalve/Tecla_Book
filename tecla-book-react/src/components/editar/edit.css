@@ -1,30 +1,28 @@
-/*@import url("https://fonts.googleapis.com/css2?family=Oxygen:wght@300;400;700&display=swap");
-@import url("https://fonts.googleapis.com/css2?family=Kulim+Park:wght@200&display=swap");
-
 body {
   display: grid;
   background-color: white;
 }
 
-header {
-  padding: 50px;
-  background-color: #672a44;
-  color: blanchedalmond;
-  font-family: "Oxygen", sans-serif;
-  font-size: 85px;
-  margin: 5px;
-  text-align: center;
+.formulario_registro {
+  display: flex;
+  flex-flow: row;
+  justify-content: center;
+
 }
 
 #formulariox {
-  margin-left: 300px;
-  margin-right: 300px;
+  /*margin-left: 300px;
+  margin-right: 300px;*/
+  display: flex;
+  flex-flow: column;
+  justify-content: center;
   text-align: center;
   background-color: #ffbea9;
   justify-content: center;
   align-items: center;
   padding: 35px;
   box-shadow: 2px 2px 20px black;
+  width: 500px;
 }
 
 h1 {
@@ -35,21 +33,21 @@ h1 {
 
 label {
   font-family: "Kulim Park", sans-serif;
-  font-size: 25px;
-  font-weight: 300;
+  font-size: 20px;
+  font-weight: 1000;
 }
 
 p {
   font-family: "Kulim Park", sans-serif;
-  font-size: 16px;
+  font-size: 14px;
 }
 
 div {
-  padding: 10px;
+  padding: 20px;
 }
 
 input {
-  width: 55%;
+  width: 100%;
   height: 45px;
   border-radius: 4px;
   outline: none;
@@ -67,7 +65,7 @@ input {
 }
 
 .btn-enviar {
-  width: 45%;
+  width: 70px;
   height: 70px;
   background-color: #672a44;
   border-radius: 5px;
@@ -84,7 +82,8 @@ button:hover {
 button {
   color: #672a44;
   background-color: #672a44;
-  font-family: "Kulim Park", sans-serif;
+  font-family: "Oxygen", sans-serif;
+  font-size: 13.5px;
 }
 
 footer {
@@ -94,9 +93,14 @@ footer {
   font-size: 20px;
 }
 
+.div_boton {
+  background-color: rgb(170, 101, 101);
+
+}
+
+
 @media only screen and (min-width: 901px) {
   .btn-enviar {
     width: 20%;
   }
-}*/
-
+}
