@@ -1,7 +1,62 @@
 @import url("https://fonts.googleapis.com/css2?family=Oxygen:wght@300;400;700&display=swap");
 @import url("https://fonts.googleapis.com/css2?family=Kulim+Park:wght@200&display=swap");
 
-.imagenes {
+.boton1 {
+  background-color: #672a44;
+  border: #672a44;
+  width: 120px;
+  height: 40px;
+  box-shadow: 2px 2px 10px black;
+  color: white;
+  font-family: "Kulim Park", sans-serif;
+}
+
+.boton1:hover {
+  background-color: #c35365;
+  color: black;
+}
+
+.boton_publicar {
+  background-color: #672a44;
+  border: #672a44;
+  width: 120px;
+  height: 40px;
+  
+  box-shadow: 2px 2px 10px black;
+  font-family: "Kulim Park", sans-serif;
+}
+
+.boton_publicar:hover {
+  background-color: #c35365;
+  color: black;
+}
+
+.general_publicar {
+  /*margin-left: 670px;
+  margin-top: -260px;*/
+    width: 600px;
+    display: flex;
+    flex-flow: row;
+    justify-content: center;
+    
+  
+}
+
+.tarjeta-publicar2 {
+  
+  width: 500px;
+  height: 180px;
+  background-color: #672a44;
+  
+}
+
+.formato_publicar {
+  
+  width: 600px;
+  box-shadow: 2px 2px 10px black;
+}
+
+/*.imagenes {
   height: 20px;
 }
 
@@ -19,66 +74,23 @@
   margin-bottom: 25px;
 }
 
-.boton_publicar {
-  background-color: #672a44;
-  border: #672a44;
-  width: 120px;
-  height: 40px;
-  position: relative;
-  left: 560px;
-  box-shadow: 2px 2px 10px black;
-  font-family: "Kulim Park", sans-serif;
-}
 
-.boton_publicar:hover {
-  background-color: #c35365;
-  color: black;
-}
 
-.formato_publicar {
-  position: relative;
-  left: 70px;
-  width: 676px;
-  margin-top: 25px;
-  box-shadow: 2px 2px 10px black;
-}
 
-.boton1 {
-  background-color: #672a44;
-  border: #672a44;
-  width: 120px;
-  height: 40px;
-  box-shadow: 2px 2px 10px black;
-  color: white;
-  font-family: "Kulim Park", sans-serif;
-}
 
-.boton1:hover {
-  background-color: #c35365;
-  color: black;
-}
 
-.general {
-  margin-left: 670px;
-  margin-top: -260px;
-  width: 615px;
-  
-}
 
-.tarjeta-publicar {
-  margin-top: 10px;
-  width: 500px;
-  height: 180px;
-  background-color: #672a44;
-  
-}
+
+
+
 
 .tarjeta-publicar2 {
   background-color: rgb(207, 207, 207);
   width: 470px;
   
   
-}
+}*/
+
 
 
 

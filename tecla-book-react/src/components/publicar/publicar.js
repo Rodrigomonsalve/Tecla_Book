@@ -28,9 +28,9 @@ const erase = () => {
     return (
    
 
-    <div className="container general">
-      <div className = "row">
-      <form className="col-6" onSubmit={comment}>
+    <div className="container general_publicar">
+      <div className = "">
+      <form className="" onSubmit={comment}>
         <div className="formato_publicar">
           <label className="visually-hidden" htmlFor="specificSizeInputGroupUsername">Username</label>
           <div className="input-group">

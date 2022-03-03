@@ -34,10 +34,8 @@ function DatosPrincipal ({da}) {
 
 
   return (
-    <div className="container">
-    <div className="row contenido">
-    <div className="col-5">
-      
+    
+    <div className="contenedor_datos ">
       <div className="card informacion">
         <div className="card-header">
           Mi información:
@@ -50,8 +48,7 @@ function DatosPrincipal ({da}) {
         
       </div>
     </div>
-    </div>
-    </div>
+    
   )
 }
 
