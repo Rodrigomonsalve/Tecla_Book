@@ -7,6 +7,7 @@ module.exports.listUsers = async () => {
 
 module.exports.addUser = async (user) => {
     await userModel.add(user)
+    console.log("usuario registrado", user)
     return "Usuario registrado"
 }
 

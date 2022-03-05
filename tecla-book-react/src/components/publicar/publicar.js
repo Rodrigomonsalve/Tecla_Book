@@ -31,6 +31,7 @@ const erase = () => {
     <div className="container general_publicar">
       <div className = "">
       <form className="" onSubmit={comment}>
+      <p className="letrero">Dinos por favor, qué nos quieres compartir el día de hoy:</p>
         <div className="formato_publicar">
           <label className="visually-hidden" htmlFor="specificSizeInputGroupUsername">Username</label>
           <div className="input-group">

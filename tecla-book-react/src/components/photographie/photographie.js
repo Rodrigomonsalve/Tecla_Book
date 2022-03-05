@@ -34,9 +34,9 @@ useEffect (() => {
 
     return (
         <div>
-        <div className="row contendeor_cabecera">
-          <div className="col-12 cabecera">
-            <div className="col-12 contenedor_imagen_fondo">
+        <div className="contendeor_cabecera">
+          <div className="cabecera">
+            <div className="contenedor_imagen_fondo">
             <img src="http://localhost:3001/photos/javascript.png" className="imagen_fondo"></img>
           </div>
           <div className="row"> 
